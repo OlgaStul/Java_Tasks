@@ -1,0 +1,26 @@
+import java.io.FileReader;
+import java.io.IOException;
+
+public class OpenFile {
+    public static void main(String[] args) {
+        FileReader reader = null;
+        try {
+            reader = new FileReader ("file.txt");
+            // открыть файл: неправильное имя файла
+            // читать из файла:  — сбой
+        }
+        catch (IOException ex) {
+            System.out.println("Была проблема!");
+        }
+        catch (IOException ex) {
+            System.out.println("Была проблема!");
+        }
+        catch (Exception ex) {
+            System.out.println("Была проблема!");
+        }
+        finally {
+            if (reader != null)
+                reader.close ();
+        }
+    }
+}
