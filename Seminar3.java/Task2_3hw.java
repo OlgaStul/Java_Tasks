@@ -1,0 +1,26 @@
+// Пусть дан произвольный список целых чисел. Удалить из него чётные числа.
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class Task2_3hw {
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>();
+        Random random = new Random();
+
+        for (int i = 0; i < 20; i++) {
+            numbers.add(i, random.nextInt(10));
+        }
+
+        System.out.println(numbers);
+
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0)
+                numbers.remove(i--);
+        }
+
+        System.out.println(numbers);
+    }
+
+}
